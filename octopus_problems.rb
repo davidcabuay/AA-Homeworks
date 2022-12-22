@@ -34,5 +34,16 @@ fishes = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh
  end
 #  p clever_octopus(fishes)
 
-tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", 
-               "left",  "left-up" ]
+tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
+
+def slow_dance(direction, array)
+    array.each_with_index do |ele,i|
+        return i if ele == direction
+    end
+end
+
+def fast_dance(direction, array)
+    
+end
+p slow_dance("up", tiles_array)
+p slow_dance("right-down", tiles_array)

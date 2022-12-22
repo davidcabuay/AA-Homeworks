@@ -27,7 +27,7 @@ fishes = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh
     return result[-1]
  end
 
- p dominant_octopus(fishes)
+#  p dominant_octopus(fishes)
 
  def clever_octopus(arr)
     arr.max{|el| el.length}
@@ -42,8 +42,19 @@ def slow_dance(direction, array)
     end
 end
 
-def fast_dance(direction, array)
-    
+tiles_hash = {
+    "up" => 0,
+    "right-up" => 1,
+    "right"=> 2,
+    "right-down" => 3,
+    "down" => 4,
+    "left-down" => 5,
+    "left" => 6,
+    "left-up" => 7
+}
+
+def fast_dance(direction, hash)
+    hash[directions]
 end
-p slow_dance("up", tiles_array)
-p slow_dance("right-down", tiles_array)
+# p slow_dance("up", tiles_array)
+# p slow_dance("right-down", tiles_array)

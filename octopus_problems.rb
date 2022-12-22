@@ -23,10 +23,13 @@ fishes = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh
     pivot = arr[0]
     left = arr[1..-1].select{|el| el.length < pivot.length}
     right = arr[1..-1].select{|el| el.length >= pivot.length}
-    result = left.dominant_octopus(arr) + [pivot] + right.dominant_octopus(arr)
+    result = [dominant_octopus(left)] + [pivot] + [dominant_octopus(right)]
     return result[-1]
  end
 
-#  p dominant_octopus(fishes)
+ p dominant_octopus(fishes)
 
- def clever_octopus
+ def clever_octopus(arr)
+    arr.max{|el| el.length}
+ end
+#  p clever_octopus(fishes)

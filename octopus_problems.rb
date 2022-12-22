@@ -19,7 +19,7 @@ fishes = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh
 #  p sluggish_octopus(fishes)
 
  def dominant_octopus(arr)
-    return self if arr.length <=1
+    return arr[-1] if arr.length <=1
     pivot = arr[0]
     left = arr[1..-1].select{|el| el.length < pivot.length}
     right = arr[1..-1].select{|el| el.length >= pivot.length}
@@ -33,3 +33,6 @@ fishes = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh
     arr.max{|el| el.length}
  end
 #  p clever_octopus(fishes)
+
+tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", 
+               "left",  "left-up" ]
